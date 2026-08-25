@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>厦门大学附属第一医院海沧院区泌尿外科住院指南</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f0f4f8;
+            line-height: 1.8;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        .header {
+            background: #1e5aa8;
+            color: #fff;
+            padding: 24px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+        .header .sub {
+            font-size: 16px;
+            margin-top: 6px;
+            opacity: 0.95;
+        }
+        .content {
+            padding: 16px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1e5aa8;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 4px solid #1e5aa8;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .icon { font-size: 22px; }
+
+        /* 交通方式 */
+        .transport-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .transport-card h3 {
+            font-size: 16px;
+            color: #1e5aa8;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .transport-card p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .highlight {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        .subway-line {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 13px;
+            color: white;
+            margin: 0 2px;
+        }
+        .line1 { background: #e65100; }
+        .line2 { background: #2e7d32; }
+        .time-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 15px;
+            margin-top: 12px;
+        }
+
+        /* 流程 */
+        .flow-box {
+            background: #f0f7ff;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .flow-box h3 {
+            font-size: 16px;
+            color: #fff;
+            background: #1e5aa8;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: -16px -16px 12px -16px;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin: 10px 0;
+            background: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #1e5aa8;
+        }
+        .step-num {
+            background: #1e5aa8;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        .step-text {
+            font-size: 15px;
+            line-height: 1.7;
+            flex: 1;
+        }
+        .step-text strong {
+            color: #1e5aa8;
+        }
+
+        /* 联系 */
+        .contact-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .contact-box .label {
+            font-size: 16px;
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .contact-box .name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1e5aa8;
+            margin: 8px 0;
+        }
+        .contact-box .phone {
+            font-size: 18px;
+            color: #333;
+            margin: 6px 0;
+        }
+        .contact-box .tip {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+        .qr-wrap {
+            margin-top: 16px;
+            text-align: center;
+        }
+        .qr-wrap img {
+            width: 160px;
+            height: 160px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            object-fit: contain;
+        }
+        .qr-label {
+            font-size: 13px;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #999;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>厦门大学附属第一医院海沧院区</h1>
+            <div class="sub">泌尿外科住院指南</div>
+        </div>
+
+        <div class="content">
+            <!-- 来院方式 -->
+            <div class="section">
+                <div class="section-title"><span class="icon">🚗</span><span>来院方式</span></div>
+
+                <div class="transport-card">
+                    <h3>🚕 打车 / 网约车</h3>
+                    <p>定位"厦门大学附属第一医院海沧院区（厦门市肿瘤医院）门诊部"</p>
+                    <p>下车后进门诊楼，找到医院门诊部导诊台</p>
+                </div>
+
+                <div class="transport-card">
+                    <h3>🚇 地铁 + 公交</h3>
+                    <p>① 从<strong>镇海路站</strong>乘坐 <span class="subway-line line1">1号线</span>（往岩内方向）</p>
+                    <p>② 到<strong>吕厝站</strong>换乘 <span class="subway-line line2">2号线</span>（往天竺山方向）</p>
+                    <p>③ 到<strong>东瑶站</strong>下车，从 <span class="highlight">3号出口</span> 出站</p>
+                    <p>④ 换乘 <strong>803路</strong> 公交到肿瘤医院门诊楼站（也可打车或步行）</p>
+                    <p>⑤ 步行进入医院，找到医院门诊部导诊台</p>
+                </div>
+
+                <div class="transport-card">
+                    <h3>🚗 自驾</h3>
+                    <p>导航至"厦门大学附属第一医院海沧院区5号门"</p>
+                    <p>驶入地下车库，停车后坐电梯到住院部2楼，穿过长廊至门诊楼，找到医院门诊部导诊台</p>
+                </div>
+
+                <div class="time-box">
+                    <strong>门诊时间：</strong>上午 8:00-12:00 / 下午 14:00-17:00
+                </div>
+            </div>
+
+            <!-- 住院办理 -->
+            <div class="section">
+                <div class="section-title"><span class="icon">🏥</span><span>住院办理步骤</span></div>
+
+                <div class="flow-box">
+                    <h3>✅ 情形一：已在总院门诊开具住院证</h3>
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div class="step-text">
+                            到 <strong>门诊楼 2楼</strong><br>
+                            <strong>住院收费窗口</strong> 缴纳押金
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div class="step-text">
+                            到 <strong>住院部 9楼</strong><br>
+                            找到 <strong>9A 护士站</strong><br>
+                            护士协助办理入院手续
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-box">
+                    <h3>📝 情形二：未在总院门诊开具住院证</h3>
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div class="step-text">
+                            到 <strong>门诊楼 4楼 A2 诊区</strong><br>
+                            泌尿外科门诊挂号，开具住院证
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div class="step-text">
+                            到 <strong>门诊楼 2楼</strong><br>
+                            <strong>住院收费窗口</strong> 缴纳押金
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div class="step-text">
+                            到 <strong>住院部 9楼</strong><br>
+                            找到 <strong>9A 护士站</strong><br>
+                            护士协助办理入院手续
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 联系方式 -->
+            <div class="section">
+                <div class="section-title"><span class="icon">📞</span><span>有问题找谁</span></div>
+                <div class="contact-box">
+                    <div class="label">对接医生</div>
+                    <div class="name">左松林</div>
+                    <div class="phone">电话 / 微信：<strong>13276960798</strong></div>
+                    <div class="tip">也可咨询门诊导诊台工作人员</div>
+                    <div class="qr-wrap">
+                        <img src="wechat-qr.jpg" alt="微信二维码">
+                        <div class="qr-label">扫码添加微信</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            本指南仅供住院参考，具体以医院现场安排为准
+        </div>
+    </div>
+</body>
+</html>
